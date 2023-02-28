@@ -76,8 +76,35 @@ meter {
 :where(dialog:modal) {
     all: revert;
 }
-
+/*👉Above is resetting css👈*/
+/*👉Style guide below 👈*/
 :root {
- --carolina-blue: #7bb2d9ff;
- --cream: #f3ffb9ff;
+ --blue-dark: #274c77;
+ --blue-medium: #6096ba;
+ --blue-light: #a3cef1;
+ --shaded-white: #e7ecef;
+ font-family: sans-serif, Arial;
+}
+
+h1 {font-size:18px
+}
+h2 {
+ font-size: 16px;
+}
+h3 {
+ font-size: 14px;
+}
+p {
+ font-size:14px
+}
+
+
+
+
+
+header.nav {
+
+}
+
+section#about {
 }
