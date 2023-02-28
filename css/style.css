@@ -77,34 +77,86 @@ meter {
     all: revert;
 }
 /*👉Above is resetting css👈*/
-/*👉Style guide below 👈*/
+/*👉Style guide👈*/
 :root {
- --blue-dark: #274c77;
- --blue-medium: #6096ba;
- --blue-light: #a3cef1;
- --shaded-white: #e7ecef;
- font-family: sans-serif, Arial;
+    --blue-dark: #274c77;
+    --blue-medium: #6096ba;
+    --blue-light: #a3cef1;
+    --shaded-white: #e7ecef;
+    font-family: sans-serif, Arial;
 }
 
-h1 {font-size:18px
+h1 {
+    font-size: 18px;
 }
 h2 {
- font-size: 16px;
+    font-size: 16px;
 }
 h3 {
- font-size: 14px;
+    font-size: 14px;
 }
 p {
- font-size:14px
+    font-size: 14px;
+}
+body {
+    background-color: var(--shaded-white);
+}
+/*👉Header👈*/
+header {
+    /*👉  background-color: var(--blue-medium);👈*/
+    background-image: url("/images/pexels-shane-aldendorff-1493112-resized.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header section {
+    flex: 0.5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-
-
-
-
-header.nav {
-
+header section img {
+    width: 7em;
+    margin-left: 3em;
 }
-
+header nav {
+    margin-right: 3em;
+}
+header nav ul {
+    text-decoration: underline;
+    display: flex;
+    gap: 20px;
+}
+header h1 {
+    font-size: 6em;
+    border: 1px solid red;
+}
+header h2 {
+    font-size: 4em;
+    border: 1px solid red;
+    margin: 20% 10% 0% 20%;
+}
+/*👉About👈*/
 section#about {
+    height: 100vh;
+}
+
+/*👉Services👈*/
+section#services {
+    height: 100vh;
+    background-color: var(--blue-medium);
+}
+/*👉Contact👈*/
+section#contact {
+    height: 80vh;
+}
+/*👉Footer👈*/
+footer {
+    height: 20vh;
+    background-color: var(--blue-medium);
 }
