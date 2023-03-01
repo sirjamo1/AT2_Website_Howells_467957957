@@ -82,10 +82,12 @@ meter {
     --blue-dark: #274c77;
     --blue-medium: #6096ba;
     --blue-light: #a3cef1;
+    --blue-light-opacity: #a3cef1a8;
     --shaded-white: #e7ecef;
+}
+* {
     font-family: sans-serif, Arial;
 }
-
 h1 {
     font-size: 18px;
 }
@@ -189,21 +191,94 @@ header h2 {
 /*👉About👈*/
 section#about {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
+section#about h2 {
+    font-size: 2.6em;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.324);
+}
+section#about article {
+    width: 90%;
+    background-color: var(--blue-medium);
+    border-radius: 6px;
+    padding: 16px;
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.324);
+    -webkit-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.324);
+    -moz-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.324);
+}
+section#about article p {
+    font-size: 1.3em;
+    text-align: center;
+}
 /*👉Services👈*/
 section#services {
     height: 100vh;
-    background-color: var(--blue-medium);
+    background-image: url("/images/pexels-antoni-shkraba-6749769-resized.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
+section#services h2 {
+    font-size: 2.6em;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.324);
+}
+section#services article {
+    background-color: var(--blue-light-opacity);
+    width: 90%;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+section#services ul {
+    list-style-image: url("/images/logo15px.png");
+    list-style-position: inside;
+}
+
 /*👉Contact👈*/
 section#contact {
-    height: 80vh;
+    height: 90vh;
+    background-color: var(--blue-medium);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+section#contact h2 {
+    align-self: center;
+    font-size: 2.6em;
+    text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.6);
+}
+section#contact article {
+    background-color: var(--blue-light);
+    width: 80%;
+      border-radius: 6px;
+    box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.3);
+    padding: 16px;
+}
+section#contact table {
+/*👉   display: flex;👈*/
+    width: 100%;
+    border: 1px solid red;
+ /*👉   justify-content: space-between;👈*/
+}
+section#contact tr {
+    width: 100%;
+     text-align: left;
 }
 /*👉Footer👈*/
 footer {
-    height: 20vh;
-    background-color: var(--blue-medium);
+    height: 10vh;
+    background-color: var(--blue-dark);
 }
 
 @media screen and (min-width: 500px) {
@@ -245,67 +320,11 @@ footer {
         color: var(--blue-dark);
     }
 
-    header > section {
-        height: 80%;
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        justify-content: space-around;
-        align-items: center;
-        text-align: center;
-    }
     header h1 {
         font-size: 7em;
         font-weight: 400;
-        text-shadow: 4px 4px 2px rgba(255, 255, 255, 0.6);
     }
     header h2 {
         font-size: 3em;
-        text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.6);
     }
 }
-
-/*👉Header👈*/
-/*👉header {
-    background-image: url("/images/pexels-shane-aldendorff-1493112-resized.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-header nav {
-    flex: 0.5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 20%;
-}
-
-header nav img {
-    width: 7em;
-    margin-left: 3em;
-}
-header nav ul {
-    margin-right: 3em;
-    text-decoration: underline;
-    display: flex;
-    gap: 20px;
-}
-header section {
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    justify-content: center;
-}
-header h1 {
-    font-size: 6em;
-}
-header h2 {
-    font-size: 4em;
-    margin: 20% 10% 0% 20%;
-}👈*/
