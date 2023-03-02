@@ -224,7 +224,7 @@ section#about article p {
 /*👉Services👈*/
 section#services {
     height: 100vh;
-    background-image: url("/images/pexels-antoni-shkraba-6749769-resized.jpg");
+    background-image: url("/images/pexels-antoni-shkraba-6749769-500w.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -393,7 +393,7 @@ footer a {
     /*👉Services👈*/
     section#services {
         height: 100vh;
-        background-image: url("/images/pexels-antoni-shkraba-6749769.jpg");
+        background-image: url("/images/pexels-antoni-shkraba-6749769-1000w.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
