@@ -1,13 +1,10 @@
 const navList = document.getElementsByClassName("nav-list");
 const toggleNavDisplay = () => {
-    navList[0].style.setProperty(
-        "display",
-        `${navList[0].style.display === "none" ? "block" : "none"}`
-    );
+    navList[0].classList.toggle("mobile-nav-active");
 };
 window.addEventListener("resize", (e) => {
-    navList[0].style.setProperty(
-        "display",
-        `${document.body.clientWidth >= 500 ? "flex" : "none"}`
-    );
+    if (document.body.clientWidth >= 500 && navList[0].classList.length > 0) {
+        // toggleNavDisplay();
+        navList[0].classList.remove("mobile-nav-active")
+    }
 });
