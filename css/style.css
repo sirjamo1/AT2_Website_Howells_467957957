@@ -111,7 +111,7 @@ figcaption {
 }
 /*👉Header👈*/
 header {
-    background-image: url("images/woman-6823356.png");
+    background-image: url("./images/woman-6823356.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -233,7 +233,7 @@ section#about article p {
 /*👉Services👈*/
 section#services {
     height: 100vh;
-    background-image: url("images/pexels-antoni-shkraba-6749769-1000w.jpg");
+    background-image: url("./images/pexels-antoni-shkraba-6749769-1000w.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -254,7 +254,7 @@ section#services article {
 }
 
 section#services ul {
-    list-style-image: url("images/logo15px.png");
+    list-style-image: url("./images/logo15px.png");
     list-style-position: inside;
 }
 section#services article figure {
@@ -428,7 +428,7 @@ footer a {
     }
 
     section#services ul {
-        list-style-image: url("images/logo25px.png");
+        list-style-image: url("./images/logo25px.png");
     }
     section#services article h3 {
         align-self: flex-start;
