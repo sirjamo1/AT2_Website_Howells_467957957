@@ -131,7 +131,7 @@ header nav img {
     height: 80px;
     margin-left: 1.5em;
 }
-header nav > section {
+header nav > div {
     display: grid;
     grid-template-rows: 2fr 3fr;
 }
@@ -142,9 +142,10 @@ header button {
     margin-right: 40px;
     border-radius: 16px;
 }
-header button div {
+header button span {
     width: 40px;
     height: 4px;
+    display: block;
     background-color: black;
     margin: 5px;
     border-radius: 2px;
@@ -171,7 +172,7 @@ header li {
     padding: 0px;
     width: 100%;
     text-align: center;
-    
+
     transition: 0.3s ease-in;
 }
 header li:hover {
@@ -232,7 +233,7 @@ section#about article p {
 /*👉Services👈*/
 section#services {
     height: 100vh;
-    background-image: url("/images/pexels-antoni-shkraba-6749769-500w.jpg");
+    background-image: url("/images/pexels-antoni-shkraba-6749769-1000w.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -256,9 +257,9 @@ section#services ul {
     list-style-image: url("/images/logo15px.png");
     list-style-position: inside;
 }
-section#services article aside {
-        display: none;
-    }
+section#services article figure {
+    display: none;
+}
 
 /*👉Contact👈*/
 section#contact {
@@ -284,7 +285,8 @@ section#contact article {
     padding: 16px;
 }
 section#contact table,
-span, a, 
+span,
+a,
 p {
     margin: 6px;
 }
@@ -320,7 +322,7 @@ footer {
     align-items: center;
     font-size: 0.8em;
 }
-footer article {
+footer span {
     align-items: center;
     display: flex;
 }
@@ -333,12 +335,13 @@ footer a {
 
 @media screen and (min-width: 500px) {
     /*👉Header👈*/
-    header nav > section {
+    header nav > div {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         width: 60%;
     }
-    
+
     .nav-list {
         display: flex;
     }
@@ -351,17 +354,13 @@ footer a {
     header button {
         display: none;
     }
-
-    header nav > section {
-        justify-content: center;
-    }
     header ul {
         width: 100%;
         background-color: transparent;
         box-shadow: none;
         justify-content: space-evenly;
         border: none;
-        gap: 10px
+        gap: 10px;
     }
     header li {
         padding: 4px;
@@ -399,10 +398,6 @@ footer a {
         font-size: 1.6em;
     }
     /*👉Services👈*/
-    section#services {
-        background-image: url("/images/pexels-antoni-shkraba-6749769-1000w.jpg");
-
-    }
     section#services h2 {
         font-size: 3em;
         color: white;
@@ -413,29 +408,30 @@ footer a {
         -webkit-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
         -moz-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
     }
-    section#services article {
-        width: 70%;
-       display: flex;
-       align-items: center;
-
+    section#services article div {
+        width: 100%;
+        display: flex;
+        align-items: center;
     }
-     section#services article ul{
+    section#services article ul {
         padding-right: 10%;
-     }
-    section#services article aside {
-        width: 50%;
+    }
+    section#services article figure {
+        max-width: 30%;     
         display: block;
     }
-    section#services article aside img{
+    section#services article figure img {
         width: 100%;
     }
-    section#services article aside figcaption {
+    section#services article figure figcaption {
         text-align: center;
     }
 
-
     section#services ul {
         list-style-image: url("/images/logo25px.png");
+    }
+    section#services article h3 {
+        align-self: flex-start;
     }
 
     /*👉Contact👈*/
@@ -453,7 +449,7 @@ footer a {
         -webkit-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
         -moz-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
     }
-    section#services aside img{
+    section#services aside img {
         width: 80px;
     }
     /*👉Footer👈*/
@@ -465,13 +461,11 @@ footer a {
     }
 }
 
-
 @media screen and (min-width: 1000px) {
-
-  header > section { 
-    align-items:flex-start;
-}
-  header > section h2 {
-    align-self: flex-end;
-  }
+    header > section {
+        align-items: flex-start;
+    }
+    header > section h2 {
+        align-self: flex-end;
+    }
 }
