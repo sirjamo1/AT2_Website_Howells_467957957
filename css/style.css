@@ -106,6 +106,9 @@ body {
 a {
     text-decoration: underline;
 }
+figcaption {
+    font-size: 10px;
+}
 /*👉Header👈*/
 header {
     background-image: url("/images/woman-6823356.png");
@@ -167,14 +170,21 @@ header ul {
 header ul:hover {
 }
 header li {
-    padding: 4px;
+    padding: 0px;
     width: 100%;
     text-align: center;
+    
     transition: 0.3s ease-in;
 }
 header li:hover {
     background-color: var(--blue-medium);
     color: white;
+}
+header a {
+    margin: 0;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
 }
 
 header > section {
@@ -248,6 +258,9 @@ section#services ul {
     list-style-image: url("/images/logo15px.png");
     list-style-position: inside;
 }
+section#services article aside {
+        display: none;
+    }
 
 /*👉Contact👈*/
 section#contact {
@@ -322,6 +335,12 @@ footer a {
 
 @media screen and (min-width: 500px) {
     /*👉Header👈*/
+    header nav > section {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    
     .nav-list {
         display: flex;
     }
@@ -330,10 +349,7 @@ footer a {
         margin-left: 2em;
         margin-top: -20px;
     }
-    header nav > section {
-        display: flex;
-        flex-direction: column;
-    }
+
     header button {
         display: none;
     }
@@ -347,6 +363,7 @@ footer a {
         box-shadow: none;
         justify-content: space-evenly;
         border: none;
+        gap: 10px
     }
     header li {
         padding: 4px;
@@ -414,8 +431,24 @@ footer a {
     }
     section#services article {
         width: 70%;
-        /*👉  padding: 16px;👈*/
+       display: flex;
+       align-items: center;
+
     }
+     section#services article ul{
+        padding-right: 10%;
+     }
+    section#services article aside {
+        width: 50%;
+        display: block;
+    }
+    section#services article aside img{
+        width: 100%;
+    }
+    section#services article aside figcaption {
+        text-align: center;
+    }
+
 
     section#services ul {
         list-style-image: url("/images/logo25px.png");
@@ -436,6 +469,9 @@ footer a {
         -webkit-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
         -moz-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
     }
+    section#services aside img{
+        width: 80px;
+    }
     /*👉Footer👈*/
     footer {
         font-size: 1em;
@@ -443,4 +479,15 @@ footer a {
     footer img {
         width: 30px;
     }
+}
+
+
+@media screen and (min-width: 1000px) {
+
+  header > section { 
+    align-items:flex-start;
+}
+  header > section h2 {
+    align-self: flex-end;
+  }
 }
