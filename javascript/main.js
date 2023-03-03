@@ -4,7 +4,6 @@ const toggleNavDisplay = () => {
 };
 window.addEventListener("resize", (e) => {
     if (document.body.clientWidth >= 500 && navList[0].classList.length > 0) {
-        // toggleNavDisplay();
         navList[0].classList.remove("mobile-nav-active")
     }
 });
