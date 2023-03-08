@@ -191,16 +191,12 @@ header ul {
     -webkit-box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.3);
     -moz-box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.3);
     visibility: collapse;
- /*👉   display: none;👈*/
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
     opacity: 0;
-    
 }
 .mobile-nav-active {
     opacity: 1;
     visibility: visible;
-    transition: all 0.5s ease-out;
-   /*👉 display: inline-block;  👈*/
 }
 header li {
     padding: 0px;
