@@ -4,47 +4,34 @@
     all: unset;
     display: revert;
 }
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
-
 a,
 button {
     cursor: revert;
 }
-
 ol,
 ul,
 menu {
     list-style: none;
 }
-
-/*👉img {
-    max-inline-size: 100%;
-    max-block-size: 100%;
-}👈*/
-
 table {
     border-collapse: collapse;
 }
-
 input,
 textarea {
     -webkit-user-select: auto;
 }
-
 textarea {
     white-space: revert;
 }
-
 meter {
     -webkit-appearance: revert;
     appearance: revert;
 }
-
 :where(pre) {
     all: revert;
 }
@@ -52,15 +39,12 @@ meter {
 ::placeholder {
     color: unset;
 }
-
 ::marker {
     content: initial;
 }
-
 :where([hidden]) {
     display: none;
 }
-
 :where([contenteditable]:not([contenteditable="false"])) {
     -moz-user-modify: read-write;
     -webkit-user-modify: read-write;
@@ -68,11 +52,9 @@ meter {
     -webkit-line-break: after-white-space;
     -webkit-user-select: auto;
 }
-
 :where([draggable="true"]) {
     -webkit-user-drag: element;
 }
-
 :where(dialog:modal) {
     all: revert;
 }
@@ -120,8 +102,12 @@ a:hover {
 }
 article h3 {
     text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 10px 10% 20px 10%;
+    font-size: 1.2rem;
+    background-color: var(--blue-dark);
+    padding: 10px 0px;
+    color: white;
+    border-radius: 16px;
 }
 /*👉Header👈*/
 header {
@@ -151,7 +137,6 @@ header nav {
     width: 100%;
     height: 10%;
 }
-
 header nav img {
     height: 80px;
     margin-left: 1.5em;
@@ -245,7 +230,6 @@ header h2 {
     font-size: 2em;
     text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.6);
 }
-
 /*👉About👈*/
 section#about {
     height: 100vh;
@@ -263,7 +247,6 @@ section#about {
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
 }
-
 section#about h2 {
     font-size: 2.6em;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.324);
@@ -312,7 +295,6 @@ section#services article {
     padding: 16px;
     border-radius: 6px;
 }
-
 section#services ul {
     list-style-image: url("../images/logo15px.png");
     list-style-position: inside;
@@ -320,7 +302,6 @@ section#services ul {
 section#services article figure {
     display: none;
 }
-
 /*👉Contact👈*/
 section#contact {
     height: 90vh;
@@ -374,15 +355,6 @@ section#contact tr {
 section#contact td:first-child {
     text-align: left;
 }
-h3 {
-    font-size: 1.2rem;
-    background-color: var(--blue-dark);
-    padding-left: 4px;
-    padding-top: 2px;
-    color: white;
-    border-radius: 6px;
-    margin-bottom: 6px;
-}
 /*👉Footer👈*/
 footer {
     height: 10vh;
@@ -413,11 +385,24 @@ footer img {
 footer a {
     padding-top: 4px;
 }
-
 @media screen and (min-width: 500px) {
     article h3 {
         margin-left: 20%;
         margin-right: 20%;
+    }
+    #about h2,
+    #services h2,
+    #contact h2 {
+        font-size: 3em;
+        color: white;
+        background-color: var(--blue-dark);
+        text-align: center;
+        min-width: 40%;
+        padding: 30px 60px;
+        border-radius: 50px;
+        box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
+        -webkit-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
+        -moz-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
     }
     /*👉Header👈*/
     header nav > div {
@@ -433,7 +418,6 @@ footer a {
         justify-content: center;
         width: 60%;
     }
-
     .nav-list {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -444,7 +428,6 @@ footer a {
         margin-left: 2em;
         margin-top: -20px;
     }
-
     header button {
         display: none;
     }
@@ -461,7 +444,6 @@ footer a {
         opacity: 1;
         visibility: visible;
     }
-
     header li {
         padding: 4px;
         margin-right: 10px;
@@ -471,7 +453,6 @@ footer a {
         border-radius: 10px;
         background-color: var(--blue-light);
     }
-
     header h1 {
         font-size: 7em;
         font-weight: 400;
@@ -479,18 +460,7 @@ footer a {
     header h2 {
         font-size: 3em;
     }
-
     /*👉About👈*/
-    section#about h2 {
-        font-size: 3em;
-        color: white;
-        background-color: var(--blue-dark);
-        padding: 30px 60px;
-        border-radius: 50px;
-        box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
-        -webkit-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
-        -moz-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
-    }
     section#about article {
         width: 70%;
     }
@@ -498,16 +468,6 @@ footer a {
         font-size: 1.6em;
     }
     /*👉Services👈*/
-    section#services h2 {
-        font-size: 3em;
-        color: white;
-        background-color: var(--blue-dark);
-        padding: 30px 60px;
-        border-radius: 50px;
-        box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
-        -webkit-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
-        -moz-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
-    }
     section#services article div {
         width: 100%;
         display: -webkit-box;
@@ -516,12 +476,13 @@ footer a {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
+        justify-content: space-evenly;
     }
     section#services article ul {
-        padding-right: 10%;
+        padding-right: 6px;
+        max-width: 60%;
     }
     section#services article figure {
-        max-width: 30%;
         display: block;
     }
     section#services article figure img {
@@ -531,7 +492,6 @@ footer a {
     section#services article figure figcaption {
         text-align: center;
     }
-
     section#services ul {
         list-style-image: url("../images/logo25px.png");
     }
@@ -539,21 +499,12 @@ footer a {
         -ms-flex-item-align: start;
         align-self: flex-start;
     }
-
     /*👉Contact👈*/
     section#contact article {
         width: 70%;
     }
     section#contact h2 {
-        font-size: 3em;
-        color: white;
-        background-color: var(--blue-dark);
-        padding: 30px 60px;
-        border-radius: 50px;
         text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.324);
-        box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
-        -webkit-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
-        -moz-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
     }
     section#services aside img {
         width: 80px;
@@ -566,7 +517,6 @@ footer a {
         width: 30px;
     }
 }
-
 @media screen and (min-width: 1000px) {
     header > section {
         -webkit-box-align: start;
@@ -576,9 +526,5 @@ footer a {
     header > section h2 {
         -ms-flex-item-align: end;
         align-self: flex-end;
-    }
-    article h3 {
-        margin-left: 35%;
-        margin-right: 35%;
     }
 }
