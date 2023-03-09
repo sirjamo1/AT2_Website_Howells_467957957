@@ -194,7 +194,7 @@ header ul {
     transition: all 0.3s ease-in;
     opacity: 0;
 }
-.mobile-nav-active {
+.show-mobile-nav {
     opacity: 1;
     visibility: visible;
 }
