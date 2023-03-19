@@ -411,11 +411,10 @@ footer a {
         border: none;
         opacity: 1;
         visibility: visible;
-        /*👉   width: 70vw;👈*/
     }
     body > header li {
         width: 100%;
-        max-width: 100px;
+        max-width: 120px;
         text-align: center;
         font-size: 1.4em;
         border-radius: 10px;
@@ -429,9 +428,6 @@ footer a {
         font-size: 3em;
     }
     /*👉About👈*/
-  /*👉  section:nth-child(2) article {
-        width: 70%;
-    }👈*/
     section:nth-child(2) article p {
         font-size: 1.2em;
     }
