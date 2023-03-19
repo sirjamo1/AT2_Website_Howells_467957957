@@ -78,6 +78,12 @@ h1 {
 }
 h2 {
     font-size: 16px;
+     text-align: center;
+    margin: 10px 10% 20px 10%;
+    background-color: var(--blue-dark);
+    padding: 10px 0px;
+    color: white;
+    border-radius: 16px;
 }
 h3 {
     font-size: 14px;
@@ -100,17 +106,37 @@ a:active {
 a:hover {
     font-size: 14px;
 }
-article h3 {
-    text-align: center;
-    margin: 10px 10% 20px 10%;
-    font-size: 1.2rem;
-    background-color: var(--blue-dark);
-    padding: 10px 0px;
-    color: white;
-    border-radius: 16px;
+section {
+    height: 100vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+ h1 {
+    font-size: 2.6em;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.324);
+}
+article {
+    width: 90%;
+    border-radius: 6px;
+    padding: 16px;
 }
 /*👉Header👈*/
-header {
+body > header {
     background-image: url("../images/woman-6823356.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -127,7 +153,7 @@ header {
     -ms-flex-align: center;
     align-items: center;
 }
-header nav {
+body > header nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -137,44 +163,40 @@ header nav {
     width: 100%;
     height: 10%;
 }
-header nav img {
+body > header nav img {
     height: 80px;
-    margin-left: 1.5em;
+    padding-left: 1.5em;
 }
-header nav > div {
+body > header nav > div {
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 2fr 3fr;
     grid-template-rows: 2fr 3fr;
 }
-header button {
+body > header button {
     cursor: pointer;
     margin-top: 25px;
     margin-left: 15px;
     margin-right: 40px;
     border-radius: 16px;
 }
-header button span {
+body > header button span {
     width: 40px;
     height: 4px;
     display: block;
     background-color: black;
     margin: 5px;
     border-radius: 2px;
-    box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.3);
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.3);
-    -moz-box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.3);
 }
-header ul {
+body > header ul {
     margin-right: 1.5em;
-    width: 80px;
     z-index: 99;
     background-color: var(--blue-light);
     border-radius: 6px;
     border: 2px solid var(--blue-dark);
-    box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.3);
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.3);
-    -moz-box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.4);
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.4);
     visibility: collapse;
     transition: all 0.3s ease-in;
     opacity: 0;
@@ -183,32 +205,29 @@ header ul {
     opacity: 1;
     visibility: visible;
 }
-header li {
+body > header li {
     padding: 0px;
     width: 100%;
     text-align: center;
     -webkit-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
+    justify-content: center;
+    align-items: center;
 }
-header li:hover {
+body > header li:hover {
     background-color: var(--blue-medium);
 }
-header a {
-    margin: 0;
-    padding: 10px 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+body > header a {
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
 }
-header a:hover {
+body > header a:hover {
     color: white;
     font-size: 1em;
 }
-header > section {
+body > header > article {
     height: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -217,142 +236,72 @@ header > section {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 80%;
     text-align: center;
 }
-header h1 {
+body > header h1 {
     font-size: 4em;
     font-weight: 400;
-    text-shadow: 4px 4px 2px rgba(255, 255, 255, 0.6);
+    text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.6);
     height: 80%;
 }
-header h2 {
+body > header h2 {
     font-size: 2em;
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
     text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.6);
 }
+
 /*👉About👈*/
-section#about {
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
-}
-section#about h2 {
-    font-size: 2.6em;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.324);
-}
-section#about article {
-    width: 90%;
+section:nth-child(2) article {
     background-color: var(--blue-medium);
-    border-radius: 6px;
-    padding: 16px;
     box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.324);
     -webkit-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.324);
     -moz-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.324);
 }
-section#about article p {
+section:nth-child(2) article p {
     font-size: 1.3em;
     text-align: center;
 }
 /*👉Services👈*/
-section#services {
-    height: 100vh;
+section:nth-child(3) {
     background-image: url("../images/pexels-antoni-shkraba-6749769-1000w.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
 }
-section#services h2 {
-    font-size: 2.6em;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.324);
-}
-section#services article {
+
+section:nth-child(3) article {
     background-color: var(--blue-light-opacity);
-    width: 90%;
-    padding: 16px;
-    border-radius: 6px;
 }
-section#services ul {
+section:nth-child(3) ul {
     list-style-image: url("../images/logo15px.png");
     list-style-position: inside;
 }
-section#services article figure {
+section:nth-child(3) article figure {
     display: none;
 }
 /*👉Contact👈*/
-section#contact {
+section:nth-child(4) {
     height: 90vh;
     background-color: var(--blue-medium);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
 }
-section#contact h2 {
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-    font-size: 2.6em;
+section:nth-child(4) h1 {
     text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.6);
 }
-section#contact article {
+section:nth-child(4) article {
     background-color: var(--blue-light);
-    width: 90%;
-    border-radius: 6px;
     box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.3);
     -webkit-box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.3);
     -moz-box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.3);
-    padding: 16px;
 }
-section#contact table,
-span,
-a,
-p {
-    margin: 6px;
-}
-section#contact a {
+section:nth-child(4) a {
     color: blue;
 }
-section#contact table {
+section:nth-child(4) table {
     width: 100%;
 }
-section#contact tr {
+section:nth-child(4) tr {
     width: 100%;
     text-align: center;
 }
-section#contact td:first-child {
+section:nth-child(4) td:first-child {
     text-align: left;
 }
 /*👉Footer👈*/
@@ -386,26 +335,17 @@ footer a {
     padding-top: 4px;
 }
 @media screen and (min-width: 500px) {
-    article h3 {
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-    #about h2,
-    #services h2,
-    #contact h2 {
-        font-size: 3em;
+    section > article > h1 {
         color: white;
         background-color: var(--blue-dark);
-        text-align: center;
-        min-width: 40%;
-        padding: 30px 60px;
+        padding: 10px 50px;
         border-radius: 50px;
         box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
         -webkit-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
         -moz-box-shadow: 4px 4px 4px 2px rgba(107, 103, 103, 0.739);
     }
     /*👉Header👈*/
-    header nav > div {
+    body > header nav > div {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -416,23 +356,20 @@ footer a {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        width: 60%;
     }
     .nav-list {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
     }
-    header nav img {
+    body > header nav img {
         height: 120px;
-        margin-left: 2em;
-        margin-top: -20px;
+        align-self: center;
     }
-    header button {
+    body > header button {
         display: none;
     }
-    header ul {
-        width: 100%;
+    body > header ul {
         background-color: transparent;
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -440,91 +377,76 @@ footer a {
         -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
         border: none;
-        gap: 10px;
         opacity: 1;
         visibility: visible;
+        width: 70vw;
     }
-    header li {
-        padding: 4px;
-        margin-right: 10px;
+    body > header li {
         width: 100%;
+        max-width: 100px;
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1.4em;
         border-radius: 10px;
         background-color: var(--blue-light);
     }
-    header h1 {
+    body > header h1 {
         font-size: 7em;
         font-weight: 400;
     }
-    header h2 {
+    body > header h2 {
         font-size: 3em;
     }
     /*👉About👈*/
-    section#about article {
+    section:nth-child(2) article {
         width: 70%;
     }
-    section#about article p {
-        font-size: 1.6em;
+    section:nth-child(2) article p {
+        font-size: 1.2em;
     }
     /*👉Services👈*/
-    section#services article div {
-        width: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        justify-content: space-evenly;
+    section:nth-child(3) article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 10px;
     }
-    section#services article ul {
-        padding-right: 6px;
-        max-width: 60%;
+    section:nth-child(3) article header {
+        grid-column: 1 / span 2;
     }
-    section#services article figure {
+    section:nth-child(3) article ul:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / span 3;
+    }
+    section:nth-child(3) article ul:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    section:nth-child(3) ul {
+    list-style-image: url("../images/logo25px.png");
+    }
+    section:nth-child(3) article figure {
+        grid-column: 2;
+        grid-row: 3;
         display: block;
-    }
-    section#services article figure img {
-        width: 100%;
-        max-height: 500px;
-    }
-    section#services article figure figcaption {
         text-align: center;
     }
-    section#services ul {
-        list-style-image: url("../images/logo25px.png");
-    }
-    section#services article h3 {
-        -ms-flex-item-align: start;
-        align-self: flex-start;
+
+    section:nth-child(3) article figure img {
+        width: 80%;
+        max-width: 200px;
+        height: auto;
     }
     /*👉Contact👈*/
-    section#contact article {
-        width: 70%;
-    }
-    section#contact h2 {
+    section:nth-child(4) h1 {
         text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.324);
     }
-    section#services aside img {
-        width: 80px;
-    }
+
     /*👉Footer👈*/
     footer {
         font-size: 1em;
     }
     footer img {
-        width: 30px;
-    }
-}
-@media screen and (min-width: 1000px) {
-    header > section {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-    }
-    header > section h2 {
-        -ms-flex-item-align: end;
-        align-self: flex-end;
+        width: 0px;
+        padding-left: 6px;
     }
 }
