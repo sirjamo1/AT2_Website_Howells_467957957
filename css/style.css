@@ -284,7 +284,6 @@ section:nth-child(2) article {
     -moz-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.324);
 }
 section:nth-child(2) article p {
-    font-size: 1.3em;
     text-align: center;
 }
 /*👉Services👈*/
@@ -359,6 +358,9 @@ footer a {
     padding-top: 4px;
 }
 @media screen and (min-width: 500px) {
+    h2 {
+        font-size: 1.3em;
+    }
     section header > h1 {
         color: white;
         background-color: var(--blue-dark);
@@ -427,9 +429,9 @@ footer a {
         font-size: 3em;
     }
     /*👉About👈*/
-    section:nth-child(2) article {
+  /*👉  section:nth-child(2) article {
         width: 70%;
-    }
+    }👈*/
     section:nth-child(2) article p {
         font-size: 1.2em;
     }
