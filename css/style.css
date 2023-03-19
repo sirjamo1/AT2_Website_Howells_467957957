@@ -508,8 +508,12 @@ footer a {
     footer {
         font-size: 1em;
     }
-    footer img {
-        width: 0px;
+    footer span:nth-child(1) img {
+        width: 60px;
+        padding-left: 6px;
+    }
+    footer span:nth-child(2) img {
+        width: 30px;
         padding-left: 6px;
     }
 }
